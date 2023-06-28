@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">test_servers</string>
+    <string name="ping">Ping</string>
+    <string name="ms">ms</string>
+    <string name="take_btc" translatable="false">TAKE BTC</string>
+    <string name="boost">boost</string>
+    <string name="start">start</string>
+</resources>

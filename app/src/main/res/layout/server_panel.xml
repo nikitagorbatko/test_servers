@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/panel_background">
+
+    <ImageView
+        android:id="@+id/image_panel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_inactive_indicator_panel" />
+
+    <FrameLayout
+        android:id="@+id/frame_pointer"
+        android:layout_width="wrap_content"
+        android:layout_height="22dp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_panel"
+        app:layout_constraintEnd_toEndOf="@+id/image_panel"
+        app:layout_constraintStart_toStartOf="@+id/image_panel"
+        app:layout_constraintTop_toTopOf="@+id/image_panel">
+
+        <ImageView
+            android:id="@+id/image_pointer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_panel"
+            app:layout_constraintEnd_toEndOf="@+id/image_panel"
+            app:layout_constraintStart_toStartOf="@+id/image_panel"
+            app:layout_constraintTop_toTopOf="@+id/image_panel"
+            app:srcCompat="@drawable/ic_inactive_pointer" />
+    </FrameLayout>
+
+
+
+    <TextView
+        android:id="@+id/text_ping_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/image_panel"
+        app:layout_constraintEnd_toEndOf="@+id/image_panel"
+        app:layout_constraintStart_toStartOf="@+id/image_panel" />
+
+    <TextView
+        android:id="@+id/text_ping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ping"
+        android:textColor="@color/active_text_color"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_ping_value"
+        app:layout_constraintStart_toStartOf="@+id/image_panel"
+        app:layout_constraintTop_toTopOf="@+id/text_ping_value" />
+
+    <TextView
+        android:id="@+id/text_ms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="@string/ms"
+        android:textColor="@color/boost_text_color"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/text_ping_value"
+        app:layout_constraintEnd_toEndOf="@+id/image_panel"
+        app:layout_constraintTop_toTopOf="@+id/text_ping_value" />
+
+    <TextView
+        android:id="@+id/text_server"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="8dp"
+        android:text="SERVER 1"
+        android:textColor="@color/boost_text_color"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_panel" />
+</androidx.constraintlayout.widget.ConstraintLayout>
