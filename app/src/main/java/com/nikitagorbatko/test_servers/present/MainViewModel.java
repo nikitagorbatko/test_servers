@@ -12,17 +12,12 @@ import com.nikitagorbatko.test_servers.database.UserDbo;
 import com.nikitagorbatko.test_servers.domain.GetUserUseCase;
 import com.nikitagorbatko.test_servers.domain.UpdateBalanceUseCase;
 
-import java.util.List;
-
 
 public class MainViewModel extends ViewModel {
     private final GetUserUseCase getUserUseCase;
     private final UpdateBalanceUseCase updateBalanceUseCase;
 
-    public MainViewModel(
-            GetUserUseCase getUserUseCase,
-            UpdateBalanceUseCase updateBalanceUseCase
-    ) {
+    public MainViewModel(GetUserUseCase getUserUseCase, UpdateBalanceUseCase updateBalanceUseCase) {
         this.getUserUseCase = getUserUseCase;
         this.updateBalanceUseCase = updateBalanceUseCase;
     }

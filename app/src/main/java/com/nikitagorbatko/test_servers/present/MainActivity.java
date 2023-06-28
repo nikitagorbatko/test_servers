@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     private View thumbView;
     private MainViewModel viewModel;
     private ActivityMainBinding binding;
+    private String localBalance = "0 BTC";
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -65,11 +66,10 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.buttonTakeBtc.setOnClickListener(v -> {
-//            При нажатии на кнопку TAKE BTC мы создаем интент с шарингом и ссылкой на
-//            приложение, а также балансом пользователя.;
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);
-            sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "https://github.com/nikitagorbatko/test_servers\n" +
+                    "Мой баланс - " +  localBalance);
             sendIntent.setType("text/plain");
 
             Intent shareIntent = Intent.createChooser(sendIntent, null);
@@ -80,6 +80,7 @@ public class MainActivity extends AppCompatActivity {
             String satoshiBalance = "Satoshi " + user.balance;
             double btcResult = user.balance / 100_000_000.0;
             String btcBalance = String.format("%.8f", btcResult) + " BTC";
+            localBalance = btcBalance;
             int progress = (user.balance / 15) * 5;
             if (progress > 100) {
                 progress = 100;

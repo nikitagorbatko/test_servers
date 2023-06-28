@@ -11,9 +11,4 @@ public class UserDbo {
 
     @ColumnInfo(name = "balance")
     public int balance;
-
-    public UserDbo() {
-        uid = 0;
-        balance = 0;
-    }
 }
